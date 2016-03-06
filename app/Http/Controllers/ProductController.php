@@ -42,9 +42,7 @@ class ProductController extends Controller
           'description' => $request->description,
         ]);
 
-        dd($product);
-
-        return redirect('product'.$product->id);
+        return redirect('product/'.$product->id);
     }
 
     /**
@@ -57,7 +55,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
-        dd($product);
+        return view('product.show', compact('product'));
     }
 
     /**

@@ -16,6 +16,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
+            $table->boolean('frontpage')->default(0);
             $table->timestamps();
         });
     }
