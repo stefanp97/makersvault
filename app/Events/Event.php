@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace MakersVault\Events;
 
 abstract class Event
 {

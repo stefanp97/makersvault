@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MakersVault;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

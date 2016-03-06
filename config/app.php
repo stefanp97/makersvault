@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        MakersVault\Providers\AppServiceProvider::class,
+        MakersVault\Providers\AuthServiceProvider::class,
+        MakersVault\Providers\EventServiceProvider::class,
+        MakersVault\Providers\RouteServiceProvider::class,
 
     ],
 
