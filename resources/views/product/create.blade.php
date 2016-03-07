@@ -8,6 +8,7 @@
     </div>
     <div class="small-12 large-8 large-offset-2 end columns">
       <form class="callout" method="post" action="/product">
+        {!! csrf_field() !!}
         <label for="name">Name
         <input type="text" name="name" id="name" required></label>
         <label for="description">Description
