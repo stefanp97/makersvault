@@ -1,82 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<section class="first-section">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                        {!! csrf_field() !!}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Name</label>
-
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input type="password" class="form-control" name="password_confirmation">
-
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="small-12 columns text-center">
+            <h2>Sign Up</h2>
         </div>
     </div>
-</div>
+</section>
+<section class="product">
+    <div class="row">
+        <div class="small-12 large-6 large-offset-3 columns end">
+            <form method="post" action="/register" class="callout">
+                @include('partials.errors')
+                {!! csrf_field() !!}
+                <div class="row">
+                    <div class="small-12 columns">
+                        <label for="email">Email</label>
+                        <input class="radius" name="email" type="email" id="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 large-6 columns">
+                        <label for="first_name">First Name</label>
+                        <input class="radius" name="first_name" type="text" id="first_name">
+                    </div>
+                    <div class="small-12 large-6 columns">
+                        <label for="last_name">Last Name</label>
+                        <input class="radius" name="last_name" type="text" id="last_name">
+                    </div>
+                </div>
+
+                <label for="password">Password</label>
+                <input class="radius" name="password" type="password" value="" id="password">
+                <button type="submit" class="button expanded">Sign Me Up</button>
+            </form>
+        </div>
+    </div>
+</section>
 @endsection
