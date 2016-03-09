@@ -4,6 +4,9 @@
 <section class="home">
   <div class="row">
     <div class="small-12 columns">
+      @if(Auth::check())
+      <h3 class="text-center">Hi, {{ Auth::user()->first_name }}</h3>
+      @endif
       <h2 class="text-center">{{ $product->name }}</h2>
     </div>
     <div class="small-12 large-8 columns">

@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', 'BaseController@index');
 
 
 /*
@@ -27,6 +26,7 @@ Route::get('/', 'BaseController@index');
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+    Route::get('/', 'BaseController@index');
     Route::resource('product', 'ProductController');
     Route::get('/home', 'HomeController@index');
 });
