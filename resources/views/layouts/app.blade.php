@@ -7,8 +7,10 @@
     <title>Makers Vault</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/app.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,900' rel='stylesheet' type='text/css'>
+    @yield('headScripts')
   </head>
   <body>
     @yield('content')
+    @yield('footScripts')
   </body>
 </html>
