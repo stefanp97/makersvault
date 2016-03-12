@@ -7,6 +7,7 @@
 @section('content')
 <section class="home">
     <div class="row">
+      @include('partials/errors')
         <div class="small-12 columns">
             @if(Auth::check())
                 <h3 class="text-center">Hi, {{ Auth::user()->first_name }}</h3>

@@ -13,4 +13,9 @@ class Product extends Model
   {
     return $this->belongsToMany('MakersVault\User');
   }
+
+  public function orders()
+  {
+    return $this->hasMany('MakersVault\Order');
+  }
 }

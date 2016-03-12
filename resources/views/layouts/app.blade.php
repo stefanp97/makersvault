@@ -11,6 +11,7 @@
   </head>
   <body>
     @yield('content')
+    <script src="/assets/js/site.js"></script>
     @yield('footScripts')
   </body>
 </html>

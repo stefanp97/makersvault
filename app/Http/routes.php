@@ -29,4 +29,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', 'BaseController@index');
     Route::resource('product', 'ProductController');
     Route::get('/home', 'HomeController@index');
+    Route::post('order', 'OrderController@store');
+    Route::get('thanks/{id}', 'OrderController@receipt');
 });

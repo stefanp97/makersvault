@@ -28,4 +28,9 @@ class User extends Authenticatable
     {
       return $this->belongsToMany('MakersVault\Product');
     }
+    
+    public function orders()
+    {
+      return $this->hasMany('MakersVault\Order');
+    }
 }
